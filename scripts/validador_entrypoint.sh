@@ -1,6 +1,3 @@
-K#!/bin/bash
-echo "✅ Validador Sentinel em execução - $(date)"
-while true; do
-    sleep 60
-done
-
+#!/bin/bash
+echo "🟢 Iniciando Validador Sentinel HTTP em $(date)"
+python3 /opt/validador/scripts/validador_server.py
