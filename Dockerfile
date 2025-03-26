@@ -1,20 +1,9 @@
-# Base
-FROM ubuntu:22.04
+FROM python:3.10-slim
 
-# Evita prompts interativos
-ENV DEBIAN_FRONTEND=noninteractive
+WORKDIR /app
 
-# Atualização e dependências
-RUN apt update && apt install -y python3 python3-pip curl nano
+COPY scripts/validador_server.py .
 
-# Cria diretório da aplicação
-WORKDIR /opt/validador/scripts
+EXPOSE 8000
 
-# Copia os arquivos locais para o container
-COPY . /opt/validador/scripts
-
-# Permissões
-# RUN chmod +x /opt/validador/scripts/*.sh
-
-# Define o script de entrada
-ENTRYPOINT ["/opt/validador/scripts/validador_entrypoint.sh"]
+CMD ["python3", "validador_server.py"]
