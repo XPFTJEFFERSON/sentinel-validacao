@@ -14,7 +14,7 @@ WORKDIR /opt/validador/scripts
 COPY . /opt/validador/scripts
 
 # Permissões
-RUN chmod +x /opt/validador/scripts/*.sh
+# RUN chmod +x /opt/validador/scripts/*.sh
 
 # Define o script de entrada
 ENTRYPOINT ["/opt/validador/scripts/validador_entrypoint.sh"]
