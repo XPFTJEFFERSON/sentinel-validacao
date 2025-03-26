@@ -1,3 +1,3 @@
 #!/bin/bash
-echo "🟢 Validador Sentinel INICIADO com sucesso em $(date)"
+echo "✅ Validador Sentinel inicializado em $(date)"
 tail -f /dev/null
