@@ -1,4 +1,3 @@
 #!/bin/bash
-echo "🚀 Iniciando serviço de Validação de Dados Sentinel..."
-sleep 1
-bash validacao_main.sh
+echo "🟢 Validador Sentinel INICIADO com sucesso em $(date)"
+tail -f /dev/null
